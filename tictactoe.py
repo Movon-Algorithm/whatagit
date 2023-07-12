@@ -9,11 +9,13 @@ class GameBoard:
         self.current_player = 'X'
 
     def print_board(self):
-        print(self.board[0] + '|' + self.board[1] + '|' + self.board[2])
-        print('-+-+-')
-        print(self.board[3] + '|' + self.board[4] + '|' + self.board[5])
-        print('-+-+-')
-        print(self.board[6] + '|' + self.board[7] + '|' + self.board[8])
+        print('+-----+')
+        print('|' + self.board[0] + '|' + self.board[1] + '|' + self.board[2] + '|')
+        print('|-+-+-|')
+        print('|' + self.board[3] + '|' + self.board[4] + '|' + self.board[5] + '|')
+        print('|-+-+-|')
+        print('|' + self.board[6] + '|' + self.board[7] + '|' + self.board[8] + '|')
+        print('+-----+')
 
     def is_winner(self, player):
         # TODO 1 - return True if current_player win
