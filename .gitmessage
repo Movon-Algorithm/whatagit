@@ -1,0 +1,28 @@
+[feat] ~
+##### Subject 50 characters ################# -> |
+
+
+# Body Message
+######## Body 72 characters ####################################### -> |
+
+# Issue Tracker Number or URL
+
+# --- COMMIT END ---
+# Type can be
+#   hotfix  : important hot-fix
+#   feat    : new feature
+#   bugfix  : bug fix
+#   chore   : updating build, pkg manager etc
+#   refactor: refactoring production code
+#   docs    : changes to documentation
+#   style   : formatting, missing semi colons, etc; no code change
+#   test    : adding or refactoring tests
+# ------------------
+# Remember me ~
+#   Separate subject from body with a blank line
+#   Use the body to explain what and why vs. how
+#   Can use multiple lines with "-" for bullet points in body
+# ------------------
+# How to apply this
+#   git config commit.template .gitmessage
+# ------------------
