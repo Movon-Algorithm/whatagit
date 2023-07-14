@@ -9,21 +9,28 @@ class GameBoard:
         self.current_player = 'X'
 
     def print_board(self):
-        print(self.board[0] + '|' + self.board[1] + '|' + self.board[2])
-        print('-+-+-')
-        print(self.board[3] + '|' + self.board[4] + '|' + self.board[5])
-        print('-+-+-')
-        print(self.board[6] + '|' + self.board[7] + '|' + self.board[8])
+        print('+-----+')
+        print('|' + self.board[0] + '|' + self.board[1] + '|' + self.board[2] + '|')
+        print('|-+-+-|')
+        print('|' + self.board[3] + '|' + self.board[4] + '|' + self.board[5] + '|')
+        print('|-+-+-|')
+        print('|' + self.board[6] + '|' + self.board[7] + '|' + self.board[8] + '|')
+        print('+-----+')
 
     def is_winner(self, player):
-        # TODO 1 - return True if current_player win
-        #
+        winning_combinations = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],  # row
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],  # col
+            [0, 4, 8], [2, 4, 6]  # dia
+        ]
+
+        for combo in winning_combinations:
+            if self.board[combo[0]] == self.board[combo[1]] == self.board[combo[2]] == player:
+                return True
         return False
 
     def is_board_full(self):
-        # TODO 2 - return True if board is full
-        #
-        return False
+        return all(cell != ' ' for cell in self.board)
 
     def get_free_positions(self):
         return [i for i, cell in enumerate(self.board) if cell == ' ']
