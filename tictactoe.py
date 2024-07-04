@@ -21,9 +21,7 @@ class GameBoard:
         return False
 
     def is_board_full(self):
-        # TODO 2 - return True if board is full
-        #
-        return False
+        return all(cell != ' ' for cell in self.board)
 
     def get_free_positions(self):
         return [i for i, cell in enumerate(self.board) if cell == ' ']
